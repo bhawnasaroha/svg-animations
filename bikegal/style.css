@@ -1,0 +1,60 @@
+*{
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+}
+body{
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-x: hidden;
+}.background {
+    display: flex;
+    transform: scale(1.2);
+}
+svg.bicycle{
+  animation: rideCycle 8s linear infinite;
+  position: absolute;
+}
+#front-wheel, #rear-wheel{
+animation: wheelRotate 3s linear infinite;
+transform-origin: center;
+transform-box: fill-box;
+}
+#bike-woman{
+animation: bike 1s ease-in-out infinite alternate;
+transform-origin: bottom;
+}
+#head{
+  animation: head 1s ease-in-out infinite alternate;
+transform-origin: center;
+transform-box: fill-box;
+}
+@keyframes rideCycle {
+  from{
+transform: translateX(-200%);
+  }to{
+transform: translateX(200%);
+  }
+}
+@keyframes wheelRotate {
+  from{
+transform: rotateZ(0deg);
+  }to{
+transform: rotateZ(360deg);
+  }
+}
+@keyframes bike {
+  from {
+transform: rotateX(0deg);
+  }to {
+transform: rotateX(10deg);
+  }
+}
+@keyframes head{
+from {
+  transform:translateY(0);
+}to{
+  transform:translateY(6%);
+}
+}
